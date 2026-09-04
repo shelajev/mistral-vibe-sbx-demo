@@ -1,0 +1,15 @@
+schemaVersion: "1"
+name: mistral-vibe-demo
+agent: vibe
+workspace: ./app
+
+kits:
+  - git+https://github.com/shelajev/vibe-sbx-kit.git
+
+bindings:
+  mistral:
+    apiKey:
+      domains:
+        - api.mistral.ai
+        - console.mistral.ai
+        - chat.mistral.ai
