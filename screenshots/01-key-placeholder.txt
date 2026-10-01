@@ -1,0 +1,5 @@
+$ sbx env exec -- bash -c '
+  printf "MISTRAL_API_KEY=%s\n" "$MISTRAL_API_KEY"; vibe --version'
+
+MISTRAL_API_KEY=proxy-managed
+vibe 2.25.8

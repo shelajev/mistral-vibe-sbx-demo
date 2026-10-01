@@ -1,10 +1,10 @@
 schemaVersion: "1"
-name: mistral-vibe-demo
-agent: vibe
+name: mistral-vibe-demo-v3
+agent: sbx-kit-vibe
 workspace: ./app
 
 kits:
-  - git+https://github.com/shelajev/vibe-sbx-kit.git
+  - docker.io/olegselajev241/sbx-kit-vibe:2.25.8
 
 bindings:
   mistral:
