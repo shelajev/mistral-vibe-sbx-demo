@@ -8,3 +8,5 @@ These PNGs render recorded CLI output, rather than screenshots of a native termi
 - `vibe-task-transcript.txt` records user/assistant messages and tool results; reasoning events are excluded and trailing whitespace is trimmed.
 
 Captured on 2026-10-01 using Docker Sandboxes 0.46.0-rc5 and the published v3 Vibe 2.25.8 kit.
+
+- `03-mistral-medium.png` and `04-mistral-glm.png`: recorded one-sentence responses with the selected Vibe model alias shown in the command.

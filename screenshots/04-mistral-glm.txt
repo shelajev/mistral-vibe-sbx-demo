@@ -1,0 +1,6 @@
+$ sbx env exec -e VIBE_ACTIVE_MODEL=zai-glm-5-2 -- bash -c \
+  'vibe --trust -p "In one short sentence, confirm you are responding
+  from inside Docker Sandboxes. Do not use tools." \
+  --output text --max-turns 1 </dev/null'
+
+I'm responding from inside Docker Sandboxes.
