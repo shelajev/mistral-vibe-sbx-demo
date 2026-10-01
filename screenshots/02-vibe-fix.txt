@@ -2,18 +2,18 @@ Vibe ran: uv run pytest -v
 
     def test_filters_incomplete_tasks() -> None:
         response = client.get("/tasks", params={"completed": "false"})
-    
+
         assert response.status_code == 200
 >       assert [task["id"] for task in response.json()] == [2, 3]
 E       assert [1, 2, 3] == [2, 3]
-E         
+E
 E         At index 0 diff: 1 != 2
 ========================= 1 failed, 2 passed in 0.17s ==========================
 
 $ git diff -- app/main.py
 
 @@ -19,6 +19,6 @@ app = FastAPI(title="Task API")
- 
+
  @app.get("/tasks", response_model=list[Task])
  def list_tasks(completed: bool | None = Query(default=None)) -> list[Task]:
 -    if completed:

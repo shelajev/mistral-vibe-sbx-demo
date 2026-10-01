@@ -60,14 +60,14 @@ ________________________ test_filters_incomplete_tasks _________________________
 
     def test_filters_incomplete_tasks() -> None:
         response = client.get("/tasks", params={"completed": "false"})
-    
+
         assert response.status_code == 200
 >       assert [task["id"] for task in response.json()] == [2, 3]
 E       assert [1, 2, 3] == [2, 3]
-E         
+E
 E         At index 0 diff: 1 != 2
 E         Left contains one more item: 3
-E         
+E
 E         Full diff:
 E           [
 E         +     1,
@@ -78,10 +78,10 @@ E           ]
 tests/test_tasks.py:27: AssertionError
 =========================== short test summary info ============================
 FAILED tests/test_tasks.py::test_filters_incomplete_tasks - assert [1, 2, 3] == [2, 3]
-  
+
   At index 0 diff: 1 != 2
   Left contains one more item: 3
-  
+
   Full diff:
     [
   +     1,
